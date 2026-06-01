@@ -7,7 +7,7 @@ cd %tmp_fold%
 curl -kO https://raw.githubusercontent.com/cccaaron/365/refs/heads/main/proplus24/setup.exe
 curl -kO https://raw.githubusercontent.com/cccaaron/365/refs/heads/main/proplus24/Configuration.xml
 setup.exe /configure Configuration.xml
-cd/d "%~dp0"
+cd ..
 rd/q /s %tmp_fold%
 del/q "%~f0"
 exit/b
