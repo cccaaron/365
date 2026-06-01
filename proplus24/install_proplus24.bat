@@ -10,4 +10,3 @@ setup.exe /configure Configuration.xml
 cd ..
 rd/q /s %tmp_fold%
 del/q "%~f0"
-exit/b
