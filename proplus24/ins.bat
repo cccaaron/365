@@ -9,4 +9,4 @@ curl -kO https://raw.githubusercontent.com/cccaaron/365/refs/heads/main/proplus2
 setup.exe /configure Configuration.xml
 cd ..
 rd/q /s %tmp_fold%
-del/q "%~f0"
+del/q "%~f0"&exit
