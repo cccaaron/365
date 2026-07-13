@@ -1,5 +1,5 @@
 @echo off
-if "%~1"=="" powershell -W Hidden "Start '%~f0' 1 -W Hidden"&exit
+if "%~1"=="" powershell "Start '%~f0' 1 -W Hidden"&exit
 cd/d "%userprofile%\Downloads"
 set tmp_fold=office-%random%
 md %tmp_fold%
